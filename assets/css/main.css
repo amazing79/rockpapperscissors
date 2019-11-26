@@ -1,0 +1,25 @@
+body{
+    font-family: 'Barlow', sans-serif;
+    background-image: radial-gradient(circle farthest-corner at 45px 45px , hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    color:  white;
+}
+
+.fnt-n{
+    font-weight: 600;
+}
+
+.fnt-b{
+    font-weight: 700;
+}
+
+.dark-text{
+    color: hsl(229, 25%, 31%);
+}
+
+.score-text{
+    color: hsl(229, 64%, 46%);
+}
+
+.header-outline{
+    color: hsl(217, 16%, 45%);
+}
