@@ -17,31 +17,37 @@
   </style>
 </head>
 <body>
-  <h1>
-    ROCK<br />PAPER<br />SCISSORS - THE GAME
-  </h1>
-    <p class="fnt-b">Elije un movimiento:</p>
+  <div class="panel">
+    <h1>
+      ROCK<br />PAPER<br />SCISSORS - THE GAME
+    </h1>
+      <p class="fnt-b">Elije un movimiento:</p>
 
-    <div>
-      <input type="radio" id="rock" name="movs" value="0"
-             checked>
-      <label for="rock">Piedra</label>
-    </div>
+      <div>
+        <input type="radio" id="rock" name="movs" value="0"
+              checked>
+        <label for="rock">Piedra</label>
+        <img src="images/rock.png" alt="Rock">
+
+      </div>
+      
+      <div>
+        <input type="radio" id="paper" name="movs" value="1">
+        <label for="paper">Papel</label>
+        <img src="images/paper.png" alt="Paper">
+      </div>
+      
+      <div>
+        <input type="radio" id="scissors" name="movs" value="2">
+        <label for="scissors">Tijera</label>
+        <img src="images/scissors.png" alt="scissors">
+      </div>
+    <input type="button" name="btn_try" onclick="showResult()" value="A verrrr" />
     
-    <div>
-      <input type="radio" id="paper" name="movs" value="1">
-      <label for="paper">Papel</label>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Amazing79</a>.
     </div>
-    
-    <div>
-      <input type="radio" id="scissors" name="movs" value="2">
-      <label for="scissors">Tijera</label>
-    </div>
-  <input type="button" name="btn_try" onclick="showResult()" value="A verrrr" />
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Amazing79</a>.
   </div>
 </body>
 </html>
