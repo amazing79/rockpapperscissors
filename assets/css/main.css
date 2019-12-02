@@ -1,7 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Barlow', sans-serif;
-    background-image: radial-gradient(circle farthest-corner at 45px 45px , hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    background-image: radial-gradient(circle farthest-corner, hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     color:  white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header{
+    margin: 20px;
 }
 
 .fnt-n{
@@ -14,21 +26,25 @@ body{
 
 .dark-text{
     color: hsl(229, 25%, 31%);
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .score-text{
-    color: hsl(229, 64%, 46%);
+    color: hsl(229, 64%, 46%);  
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .header-outline{
     color: hsl(217, 16%, 45%);
 }
 
-.panel{
+.container{
     width: 1366px;
     margin: 0 auto;
 }
-
+/*
 .scissors{
     background-image: radial-gradient(16px at 45px 45px ,hsl(39, 89%, 49%),hsl(40, 84%, 53%));
 }
@@ -40,3 +56,64 @@ body{
 .rock{
     background-image: radial-gradient(circle farthest-corner at 45px 45px ,hsl(349, 71%, 52%),hsl(349, 70%, 56%));
 }
+
+.icon-goldstar {
+    fill: gold;
+    stroke: coral;
+    stroke-width: 5%;
+    stroke-linejoin: round;
+  }
+*/
+  .board{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-between;
+      vertical-align: top;
+      padding: 30px;
+  }
+
+  .game-movement{
+      width: 210px;
+      height: 210px;
+      cursor: pointer;
+      
+  }
+
+  .container p{
+      text-align: center;
+      display: block;
+  }
+
+  header{
+      display: flex;
+      justify-content: space-between;
+      border: solid 2px white;
+      padding: 10px;
+      border-radius: 10px;
+      vertical-align: top;
+
+  }
+
+  header .score{
+      background-color: white;
+      color: black;
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+  }
+
+  .container .app-name{
+      text-align: left;
+  }
+
+  section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px;
+  }
+
+  section h1{
+      padding: 20px;
+  }
