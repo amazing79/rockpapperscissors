@@ -21,6 +21,12 @@ function getMachineMove(){
     let mov_machine = document.getElementById('machine_move');
 
     mov_machine.src = pictures[mov];
+    //quito el nombre de la animacion, para reiniciarla cada vez que clickea una opcion
+    mov_machine.style.animation = '';
+    //provoca un cambio en el dom, por lo cual vuelve a actualizar el nodo y por lo tanto reinicia la animacion
+    void mov_machine.offsetWidth; 
+    //Vuelvo a agregar la animacion y mas el cambio, reinicia la misma
+    mov_machine.style.animation = 'show-move 1.5s';
     return mov;
 }
 

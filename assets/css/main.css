@@ -46,17 +46,38 @@ header{
   }
 
   .game-movement{
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       cursor: pointer;
       
   }
 
   .game-movement img{
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     cursor: pointer;
+    filter:grayscale(1)
     
+}
+
+.game-movement img:hover{
+    filter:none;
+}
+
+.game-movement #machine_move{
+    filter: none;
+}
+
+@keyframes show-move{
+    25%{
+    transform: scale(1.1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    75%{
+        transform: scale(1.1);
+    }
 }
 
   .container p{
@@ -72,10 +93,6 @@ header{
       border-radius: 10px;
       vertical-align: top;
 
-  }
-
-  #machine_move{
-      filter: grayscale(1);
   }
 
   header .score{
@@ -94,11 +111,12 @@ header{
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 30px;
+      margin: 20px;
   }
 
   section h1{
-      padding: 20px;
+      padding: 10px;
+      padding-bottom: 20px;
   }
 
   footer{
@@ -106,6 +124,10 @@ header{
       align-items: baseline;
       justify-content: space-evenly;
       padding: 10px;
+  }
+
+  #txt-result{
+      color: rgb(233, 120, 86);
   }
 
   .btn-help{
@@ -191,7 +213,6 @@ header{
         .game-movement{
             width: 100px;
             height: 100px;
-            cursor: pointer;
         }
 
         .container{
@@ -202,6 +223,7 @@ header{
         footer{
             flex-direction: column-reverse;
             align-items: center;
+            justify-content: center;
         }
 
     }
