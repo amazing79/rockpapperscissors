@@ -177,17 +177,60 @@ header{
         opacity: 1;
     }
 
+    @media (min-width:1001px){
+        header .score{
+            height: 120px;
+            width: 120px;
+        }
+    }
+
     @media (max-width:1000px){
+        body{
+            font-size: 24px;
+        }
         .game-movement{
             width: 100px;
             height: 100px;
             cursor: pointer;
-            
         }
 
         .container{
             width: 100vw;
             margin: 0 auto;
+        }
+
+        footer{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+    }
+
+    @media(max-width:500px){
+        body{
+            font-size: 20px;            
+        }
+
+        .container{
+            height: 90vh;
+        }
+
+        header .score{
+            height: 75px;
+            width: 75px;
+        }
+
+        .dark-text{
+            font-size: 35px;
+        }
+        
+        section h1{
+            font-size: 14px;
+        }
+
+        .modal .modal-help{
+            top:20vh;
+            width: 90%;
         }
 
     }
