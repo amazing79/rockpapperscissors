@@ -16,14 +16,6 @@ header{
     margin: 20px;
 }
 
-.fnt-n{
-    font-weight: 600;
-}
-
-.fnt-b{
-    font-weight: 700;
-}
-
 .dark-text{
     color: hsl(229, 25%, 31%);
     font-size: 50px;
@@ -41,29 +33,9 @@ header{
 }
 
 .container{
-    width: 1366px;
+    width: 1024px;
     margin: 0 auto;
 }
-/*
-.scissors{
-    background-image: radial-gradient(16px at 45px 45px ,hsl(39, 89%, 49%),hsl(40, 84%, 53%));
-}
-
-.papers{
-    background-image: radial-gradient(circle farthest-corner at 45px 45px, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-}
-
-.rock{
-    background-image: radial-gradient(circle farthest-corner at 45px 45px ,hsl(349, 71%, 52%),hsl(349, 70%, 56%));
-}
-
-.icon-goldstar {
-    fill: gold;
-    stroke: coral;
-    stroke-width: 5%;
-    stroke-linejoin: round;
-  }
-*/
   .board{
       display: flex;
       flex-wrap: wrap;
@@ -74,11 +46,18 @@ header{
   }
 
   .game-movement{
-      width: 210px;
-      height: 210px;
+      width: 180px;
+      height: 180px;
       cursor: pointer;
       
   }
+
+  .game-movement img{
+    width: 90%;
+    height: 90%;
+    cursor: pointer;
+    
+}
 
   .container p{
       text-align: center;
@@ -93,6 +72,10 @@ header{
       border-radius: 10px;
       vertical-align: top;
 
+  }
+
+  #machine_move{
+      filter: grayscale(1);
   }
 
   header .score{
@@ -117,3 +100,94 @@ header{
   section h1{
       padding: 20px;
   }
+
+  footer{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-evenly;
+      padding: 10px;
+  }
+
+  .btn-help{
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bolder;
+      border: white 1px solid;
+      border-radius: 10px;
+      color: white;
+      vertical-align: top;
+      padding: 10px;
+  }
+  .attribution { 
+      font-size: 11px; text-align: center; 
+      vertical-align: top;
+      padding: 20px;
+
+    }
+  .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+
+    .modal{
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0,0, 0, 0.75);   
+        padding-top: 10%;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+
+    .modal .modal-help{
+        margin: 0 auto;
+        width: 350px;
+        height: 370px;
+        background-color: white;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .modal img{
+       display: block;
+       margin: 20px;
+    }
+
+    .modal .close-modal{
+        background-color: rgb(163, 72, 7);
+        color:white;
+        border: white 2px solid;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 15px;
+        padding: 10px;
+        line-height: 24px;
+    }
+
+    .modal .close-modal:hover{
+        background-color: rgb(245, 107, 9);
+    }
+
+    .modal:target {
+        top:0;
+        opacity: 1;
+    }
+
+    @media (max-width:1000px){
+        .game-movement{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            
+        }
+
+        .container{
+            width: 100vw;
+            margin: 0 auto;
+        }
+
+    }

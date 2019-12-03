@@ -13,32 +13,70 @@ const ia_paper = [1, 0, -1];
 const ia_scissors = [-1, 1, 0];
 const mov = ['Rock', 'Papper', 'Scissor'];
 const mat_decision = [ia_rock, ia_paper, ia_scissors];
-
-function showResult(){
-    let player_1 = getPlayerMove()
-    let player_2 = getMachineMove();
-    let result = mat_decision[player_1][player_2];
-
-    console.log('You Picked ' + mov[player_1]);
-    console.log('The House Picked ' + mov[player_2]);
-    console.log('The final result is: ');
-    if (result === 0){ console.log('Draw')};
-    if (result === -1) { console.log('You Lose!!!')};
-    if (result === 1) { console.log('You win!!!!')};
-
-    return result;
-}
+const pictures = ['images/rock.png', 'images/paper.png', 'images/scissors.png'];
 
 function getMachineMove(){
-    return Math.floor(Math.random() * (3 - 0) + 0);
+
+    let mov = Math.floor(Math.random() * (3 - 0) + 0);
+    let mov_machine = document.getElementById('machine_move');
+
+    mov_machine.src = pictures[mov];
+    return mov;
 }
 
-function getPlayerMove(){
-    let result = -2;
-    let options = document.getElementsByName('movs');
-    options.forEach(mov =>{
-        if (mov.checked){ result = mov.value };
-    });
+function getPlayerMove(player){
+    var result = -1;
+    switch(player.alt)
+    {
+        case 'Rock':
+            result = 0;
+            break;
+        case 'Paper':
+            result = 1;
+            break;
+        case 'Scissors':
+            result = 2;
+            break;
+        default:
+            result=0;
+    }
+
     return result;
 }
 
+function listenerOn(){
+    var list_movs = document.getElementsByName('player-movs');
+
+    list_movs.forEach(element => {
+        element.addEventListener('click', onClick);
+    });
+}
+
+function showTestResult(result){
+    let txt_result = 'You Win';
+    let txt = document.getElementById('txt-result');
+
+    if (result === 0){ txt_result = 'Draw'};
+    if (result === -1) { txt_result = 'You Lose!!!'};
+    if (result === 1) { txt_result = 'You win!!!!'};
+
+   txt.innerHTML = txt_result;
+}
+
+function updateScore(result){
+    let score = document.getElementById('txt-score');
+
+    score.innerHTML = Number(score.innerHTML) + result;
+}
+
+function onClick(e){
+    var player_move = e.target; //obtengo cual recibio el evento
+
+    let player_1 = getPlayerMove(player_move)
+    let player_2 = getMachineMove();
+    let result = mat_decision[player_1][player_2];
+    showTestResult(result);
+    updateScore(result);
+}
+
+window.onload = listenerOn;

@@ -10,11 +10,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -25,28 +20,28 @@
             
           <div class="score">
             <p class="score-text">SCORE</p>
-            <p class="dark-text">13</p> 
+            <p class="dark-text" id="txt-score">0</p> 
           </div>
           </h1>
     </header>
     <main>
       <div class="board">
-        <div class="game-movement">
+        <div class="game-movement" name="player-movs">
           <img src="images/rock.png" alt="Rock">
         </div>
-      <div class="game-movement">
+      <div class="game-movement" name="player-movs">
         <img src="images/paper.png" alt="Paper">
       </div>
-      <div class="game-movement">
+      <div class="game-movement" name="player-movs">
         <img src="images/scissors.png" alt="Scissors">
       </div>
     </div>
     <section>
       <h1>The house choose:</h1>
-      <div class="game-movement">
-        <img src="images/scissors.png" alt="Scissors">
+      <div class="game-movement" >
+        <img src="" alt="" id="machine_move">
       </div>
-      <h1 id="txt-result">You Win!!</h1>
+      <h1 id="txt-result"></h1>
     </section>
     </main>
      
@@ -56,7 +51,16 @@
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
           Coded by <a href="#">Amazing79</a>.
       </div>
+      <div class="help">
+        <a href="#show-help" class="btn-help">Show rules!</a>
+      </div>
     </footer>
+    <aside class="modal" id="show-help">
+      <div class="modal-help">
+        <img src="images/image-rules.svg" alt="">
+        <a href="" class="close-modal">X</a>
+      </div>
+    </aside>
   </div>
 </body>
 </html>
