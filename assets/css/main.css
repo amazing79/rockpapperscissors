@@ -56,15 +56,18 @@ header{
     width: 95%;
     height: 95%;
     cursor: pointer;
+    -webkit-filter: grayscale(1);
     filter:grayscale(1)
     
 }
 
 .game-movement img:hover{
+    -webkit-filter: none;
     filter:none;
 }
 
 .game-movement #machine_move{
+    -webkit-filter: none;
     filter: none;
 }
 
