@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     background-image: radial-gradient(circle farthest-corner, hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     color:  white;
     font-size: 30px;
@@ -23,9 +23,7 @@ header{
 }
 
 .score-text{
-    color: hsl(229, 64%, 46%);  
-    font-size: 20px;
-    font-weight: bolder;
+    color: #3B4365;  
 }
 
 .header-outline{
@@ -36,14 +34,36 @@ header{
     width: 1024px;
     margin: 0 auto;
 }
-  .board{
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: space-between;
-      vertical-align: top;
-      padding: 30px;
-  }
+
+.board{
+    display: grid;
+    width: 400px;
+    height: 400px;
+    margin: 0px auto;
+    gap: 20px;
+    grid-template-areas: ". paper . rock ."
+                         ". . . . ."
+                          ". scissors scissors scissors ." /*The dots means a empty cell*/
+    ;
+    background-image: url("../../images/bg-triangle.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rock {
+    grid-area: rock;
+}
+
+.paper{
+    grid-area: paper;
+}
+
+.scissors{
+    grid-area: scissors;
+   align-self: center;
+   justify-self: center;
+}
 
   .game-movement{
       width: 160px;
@@ -227,6 +247,15 @@ header{
             flex-direction: column-reverse;
             align-items: center;
             justify-content: center;
+        }
+
+        .board{
+        width: 350px;
+        height: 350px;
+        grid-template-areas: "paper . . rock "
+                             " . . . . "
+                             ". scissors scissors ." /*The dots means a empty cell*/
+            ;
         }
 
     }

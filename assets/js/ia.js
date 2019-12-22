@@ -17,7 +17,7 @@ const pictures = ['images/rock.png', 'images/paper.png', 'images/scissors.png'];
 
 function getMachineMove(){
 
-    let mov = Math.floor(Math.random() * (3 - 0) + 0);
+    let mov = Math.floor(Math.random() * 3);
     let mov_machine = document.getElementById('machine_move');
 
     mov_machine.src = pictures[mov];
